@@ -1,0 +1,10 @@
+server:
+  port: 8201
+spring:
+  profiles: dev
+  application:
+    name: cloud-config-client
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://eureka-server1:7001/eureka/
