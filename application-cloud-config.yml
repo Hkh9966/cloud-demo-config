@@ -1,0 +1,13 @@
+﻿spring:
+  profiles:
+    active: -dev
+---
+spring:
+  profiles: dev
+  application:
+    name: service_dev
+---
+spring:
+  profiles: prod
+  application:
+    name: service_prod
