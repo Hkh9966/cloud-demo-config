@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+  instance:
+    instance-id: gateway.com
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: gateway
+
+server:
+  port: 9527
+
+zuul:
+  #前缀名
+  prefix: /hcloud
+  #封口禁止直接通过微服务名称来访问
+  ignored-services: * #禁用所有默认原访问路径 只路由我们自己配置的路径
+  routes:
+   myservice.serviceId: PROVIDER
+   myservice.path: /service/**
+
+
+

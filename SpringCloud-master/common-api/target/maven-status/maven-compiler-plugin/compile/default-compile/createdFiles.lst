@@ -1,0 +1,4 @@
+service\FeignService.class
+Fallback\DepServiceFallback$1.class
+Fallback\DepServiceFallback.class
+entity\Department.class

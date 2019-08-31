@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: provider
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server1:7001/eureka/,http://eureka-server2:7002/eureka/,http://eureka-server3:7003/eureka/
+  instance:
+    instance-id: provider-2
+    prefer-ip-address: true
+server:
+  port: 8082

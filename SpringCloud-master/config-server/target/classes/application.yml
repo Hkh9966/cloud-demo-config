@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Hkh9966/cloud-demo-config.git #github配置文件仓库名
+
+server:
+  port: 3344

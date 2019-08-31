@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config
+      name: config-client #需要从github上读取的资源名称，注意没有yml后缀名
+      profile: dev   #本次访问的配置项
+      label: master #仓库的哪个分支
+      uri: http://localhost:3344  #本微服务启动后先去找3344号服务，通过SpringCloudConfig获取GitHub的服务地址
+      username: 534410275@qq.com
+      password: hukaihan123
+management:
+  security:
+    enabled: false

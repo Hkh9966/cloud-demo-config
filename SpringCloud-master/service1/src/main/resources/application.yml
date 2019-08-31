@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: consumer
+eureka:
+  client:
+    serviceUrl:  #注册到Eureka集群
+      defaultZone: http://eureka-server1:7001/eureka/,http://eureka-server2:7002/eureka/,http://eureka-server3:7003/eureka/
+  instance:
+    instance-id: consumer-1
+    prefer-ip-address: true  #显示ip
+server:
+  port: 8081
+#微服务相关信息(在Eureka客户端可以看到)
+
+#开启服务熔断
+feign:
+  hystrix:
+    enabled: true
+
+
+info:
+  app.name: hukaihan-cloud-demo-service-1
+  company.name: tj_rcrt
+  author.name: Hukaihan
+  build.artifactId: $project.artifactId$  #pom文件中的值可以拿到
+  build.version: $project.version$
