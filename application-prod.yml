@@ -1,4 +1,4 @@
-spring:
+﻿spring:
   profiles: prod
   application:
     name: service_prod
