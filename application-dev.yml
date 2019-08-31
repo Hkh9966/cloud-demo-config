@@ -1,0 +1,4 @@
+spring:
+  profiles: dev
+  application:
+    name: service_dev
